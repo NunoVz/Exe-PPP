@@ -163,19 +163,18 @@
     int num;
     printf("Escreva o numero do mês:");
     scanf("%d",&num);
-    if(num==1){printf("Janeiro");}
-    else if(num==2){printf("Janeiro");}
-    else if(num==3){printf("Fevereiro");}
-    else if(num==4){printf("Março");}
-    else if(num==5){printf("Abril");}
-    else if(num==6){printf("Maio");}
-    else if(num==7){printf("Junho");}
-    else if(num==8){printf("Julho");}
-    else if(num==9){printf("Agosto");}
-    else if(num==10){printf("Setembro");}
-    else if(num==11){printf("Outubro");}
-    else if(num==12){printf("Novembro");}
-    else{printf("Erro, o mês não existe");}
+    char mes[12][20]={"Janeiro","Fevereiro","Março","Abril","Maio","Junho","Julho","Agosto","Setembro","Outubro","Novembro","Dezembro"};
+    if(num>=13||num<=0){printf("O numero que introduziu não corresponde a nenhum mês");}
+    else{for(int i=0;i<13;i++){if((i+1)==num){printf("%s",mes[i]);}}}
+
+
+
+    //7
+    int lados;
+    printf("Insira o numero de lados(max=20): ");
+    scanf("%d",& lados);
+    char item[20][20]={"Não Existe","Não Existe","Triângulo","Quadrilátero","Pentágono","Hexágono","Octógono","Eneágono","Undecágono","dodecágono","tridecágono","tetradecágono","pentadecágono","hexadecágono","heptadecágono","octodecágono","eneadecágono","icoságono"};
+    for(int i=0;i<21;i++){if((i+1)==lados){printf("O poligono é um %s",item[i]);}}
 
 
 }*/
