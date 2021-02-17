@@ -1,6 +1,6 @@
 //
 // Created by Vasques on 17/02/2021.
-//
+// Copiem uma alinea de cada vez, pode haver conflito entre variaveis com a mesma designação
 #include <stdio.h>
 //Ex 1.2
 /*int main() {
@@ -156,5 +156,26 @@
     if(dif<2){printf("A diferença é inferior a 2\n");}
     if(dif<4){printf("A diferença é inferior a 4\n");}
     if(dif>3){printf("A diferença é superior a 3\n");}
+
+
+
+    //6
+    int num;
+    printf("Escreva o numero do mês:");
+    scanf("%d",&num);
+    if(num==1){printf("Janeiro");}
+    else if(num==2){printf("Janeiro");}
+    else if(num==3){printf("Fevereiro");}
+    else if(num==4){printf("Março");}
+    else if(num==5){printf("Abril");}
+    else if(num==6){printf("Maio");}
+    else if(num==7){printf("Junho");}
+    else if(num==8){printf("Julho");}
+    else if(num==9){printf("Agosto");}
+    else if(num==10){printf("Setembro");}
+    else if(num==11){printf("Outubro");}
+    else if(num==12){printf("Novembro");}
+    else{printf("Erro, o mês não existe");}
+
 
 }*/
