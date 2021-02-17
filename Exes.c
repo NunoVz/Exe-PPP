@@ -90,7 +90,7 @@
     else{if(num2%2){printf("%d",num2);}else{s=num1+num2;printf("%d",s);}}
 }*/
 
-//Ex2.2
+//Ex 2.2
 /*int main() {
     //1
     int idade;
@@ -102,12 +102,18 @@
     else if(idade>=25){printf("Bilhete Light");}
     else if(idade>=13){printf("Bilhete radical");}
     else{printf("Isento de pagamento");}
+
+
+
     //2
     int hora,min,c;
     printf("Insira as horas no formato hh:mm.\n");
     scanf("%02d:%02d",& hora,& min);
     if(hora>=12){c=hora-12;printf("%d:%d pm",c,min);}
     else{printf("%d:%d am",hora,min);}
+
+
+
     //3
     int nota;
     printf("Escreva a nota do aluno:");
@@ -134,5 +140,21 @@
     }
     else if(mes==12 & dia <21){printf("Outono");}
     else{printf("Inverno");}
+
+
+    //5
+#include<time.h>
+    //srand para os numeros random não serem sempre os mesmos
+    srand(time(0));
+    int dif;
+    //rand%7  para gerar um numero aleatorio de 0-6
+    int num1= rand()%7;
+    int num2=rand()%7;
+    dif=num1-num2;
+    printf("Num1:%d\nNum2:%d\n",num1,num2);
+    printf("Diferença:%d\n",dif);
+    if(dif<2){printf("A diferença é inferior a 2\n");}
+    if(dif<4){printf("A diferença é inferior a 4\n");}
+    if(dif>3){printf("A diferença é superior a 3\n");}
 
 }*/
