@@ -89,18 +89,18 @@
     printf("Insira o dia e mes no formato dd/mm:\n");
     scanf("%02d/%02d",&dia,&mes);
     if(mes>=3 && mes <6){
-        if(mes==3 & dia<20){printf("Inverno");}
+        if(mes==3 && dia<20){printf("Inverno");}
         else{printf("Primavera");}
     }
     else if(mes>=6 && mes<9){
-        if(mes==6 & dia<21){printf("Primavera");}
+        if(mes==6 && dia<21){printf("Primavera");}
         else{printf("Verão");}
     }
     else if(mes>=9 && mes<12) {
-        if (mes == 9 & dia < 22) { printf("Verão"); }
+        if (mes == 9 && dia < 22) { printf("Verão"); }
         else{printf("Outono");}
     }
-    else if(mes==12 & dia <21){printf("Outono");}
+    else if(mes==12 && dia <21){printf("Outono");}
     else{printf("Inverno");}
 
 
