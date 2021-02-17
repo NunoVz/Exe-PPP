@@ -89,6 +89,7 @@
     if(num1%2){if(num2%2){m=num1*num2;printf("%d",m);}else{printf("%d",num1);}}
     else{if(num2%2){printf("%d",num2);}else{s=num1+num2;printf("%d",s);}}
 }*/
+
 //Ex2.2
 /*int main() {
     //1
@@ -115,5 +116,23 @@
     else if (nota<=13){printf("Suficiente");}
     else if (nota<=16){printf("Bom");}
     else{printf("Excelente");}
+    //4
+    int dia,mes;
+    printf("Insira o dia e mes no formato dd/mm:\n");
+    scanf("%02d/%02d",&dia,&mes);
+    if(mes>=3 && mes <6){
+        if(mes==3 & dia<20){printf("Inverno");}
+        else{printf("Primavera");}
+    }
+    else if(mes>=6 && mes<9){
+        if(mes==6 & dia<21){printf("Primavera");}
+        else{printf("Verão");}
+    }
+    else if(mes>=9 && mes<12) {
+        if (mes == 9 & dia < 22) { printf("Verão"); }
+        else{printf("Outono");}
+    }
+    else if(mes==12 & dia <21){printf("Outono");}
+    else{printf("Inverno");}
 
 }*/
