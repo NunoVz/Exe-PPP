@@ -27,8 +27,6 @@
 }*/
 
 
-
-
 //Ex 2.1
 /*int main() {
     int num1,num2,num3,m,s;
@@ -49,6 +47,7 @@
     if(num1%2){if(num2%2){m=num1*num2;printf("%d",m);}else{printf("%d",num1);}}
     else{if(num2%2){printf("%d",num2);}else{s=num1+num2;printf("%d",s);}}
 }*/
+
 
 //Ex 2.2
 /*int main() {
@@ -126,9 +125,9 @@
     int num;
     printf("Escreva o numero do mês:");
     scanf("%d",&num);
-    char mes[12][20]={"Janeiro","Fevereiro","Março","Abril","Maio","Junho","Julho","Agosto","Setembro","Outubro","Novembro","Dezembro"};
+    char mes[1][12]={"Janeiro","Fevereiro","Março","Abril","Maio","Junho","Julho","Agosto","Setembro","Outubro","Novembro","Dezembro"};
     if(num>=13||num<=0){printf("O numero que introduziu não corresponde a nenhum mês");}
-    else{for(int i=0;i<13;i++){if((i+1)==num){printf("%s",mes[i]);}}}
+    else{for(int i=1;i<13;i++){if((i)==num){printf("%s",mes[i]);}}}
 
 
 
@@ -136,6 +135,39 @@
     int lados;
     printf("Insira o numero de lados(max=20): ");
     scanf("%d",& lados);
-    char item[20][20]={"Não Existe","Não Existe","Triângulo","Quadrilátero","Pentágono","Hexágono","Octógono","Eneágono","Undecágono","dodecágono","tridecágono","tetradecágono","pentadecágono","hexadecágono","heptadecágono","octodecágono","eneadecágono","icoságono"};
-    for(int i=0;i<21;i++){if((i+1)==lados){printf("O poligono é um %s",item[i]);}}
+    char item[1][20]={"Não Existe","Não Existe","Triângulo","Quadrilátero","Pentágono","Hexágono","Octógono","Eneágono","Undecágono","dodecágono","tridecágono","tetradecágono","pentadecágono","hexadecágono","heptadecágono","octodecágono","eneadecágono","icoságono"};
+    for(int i=1;i<21;i++){if((i)==lados){printf("O poligono é um %s",item[i]);}}
 }*/
+
+
+//Ex2.3
+/*int main() {
+    //1, não sei se isto era o pretendido
+#include <string.h>
+    int cartoes;
+    printf("Insira o numero de cartões que quer criar:");
+    scanf("%d",&cartoes);
+    char um[]="1";
+    char dois[]="0";
+    char num[20];
+    printf("Insira os 4 numeros originais:");
+    scanf("%s",& num);
+    for(int j=1;j<(cartoes+1);j++) {
+        int cont=0;
+        for (int i = 0; i < strlen(num); i++) {
+            cont+=num[i]-'0';}
+        if(cont%2){strncat(num,&um,1);}
+        else{strncat(num,&dois,1);}
+        printf("%dº cartão:%s \n",j,num);
+    }
+
+
+    //2
+    //Fev 2005/2006->28
+    int dia,ano,mes;
+    char* meses[13][20]={{"Janeiro",31},{"Fevereiro",28},{"Março",31},{"Abril",30},{"Maio",31},{"Junho",30},{"Julho",31},{"Agosto",31},{"Setembro",30},{"Outubro",31},{"Novembro",30},{"Dezembro",31}};
+    printf("Insira o dia e mes no formato dd/mm/aa:");
+    scanf("%d/%d/%d",&dia,&mes,&ano);
+    for(int i=0;i<12;i++){if((i+1)==mes&&dia==meses[i][1]){mes++;dia=1;if(mes==12){ano++;}}else{dia++;break;}}
+    printf("%d de %s de %d",dia,meses[mes-1][0],ano);
+}
