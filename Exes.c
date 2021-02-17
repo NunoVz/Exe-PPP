@@ -5,87 +5,47 @@
 //Ex 1.2
 /*int main() {
     float preco;
-    printf("Insira o preço: ");
+    printf("Insira o preço do que deseja comprar: ");
     scanf("%f",& preco);
     int nota = 0;
     int moeda = 0;
-
     float troco = 100 - preco;
     while (troco > 0.00) {
-        if (troco >= 50) {
-            troco -= 50;
-            nota++;
-            printf("Nota de 50\n");
-        }
-        else if (troco >= 20) {
-            troco -= 20;
-            nota++;
-            printf("Nota de 20\n");
-        }
-        else if (troco >= 10) {
-            troco -= 10;
-            nota++;
-            printf("Nota de 10\n");
-        }
-        else if (troco >= 5) {
-            troco -= 5;
-            nota++;
-            printf("Nota de 5\n");
-        }
-        else if (troco >= 2) {
-            troco -= 1;
-            moeda++;
-            printf("Moedas de 2\n");
-        }
-        else if (troco >= 1) {
-            troco -= 1;
-            moeda++;
-            printf("Moedas de 1\n");
-        }
-        else if (troco >= 0.5) {
-            troco -= 0.5;
-            moeda++;
-            printf("Moedas de 0.5\n");
-        }
-        else if (troco >= 0.2) {
-            troco -= 0.2;
-            moeda++;
-            printf("Moedas de 0.2\n");
-        }
-        else if (troco >= 0.1) {
-            troco -= 0.1;
-            moeda++;
-            printf("Moedas de 0.1\n");
-        }
-        else if (troco >= 0.05) {
-            troco -= 0.05;
-            moeda++;
-            printf("Moedas de 0.05\n");
-        }
-        else if (troco >= 0.01) {
-            troco -= 0.01;
-            moeda++;
-            printf("Moedas de 0.01\n");
-        }
+        if (troco >= 50) {troco -= 50;nota++;printf("Nota de 50\n");}
+        else if (troco >= 20) {troco -= 20;nota++;printf("Nota de 20\n");}
+        else if (troco >= 10) {troco -= 10;nota++;printf("Nota de 10\n");}
+        else if (troco >= 5) {troco -= 5;nota++;printf("Nota de 5\n");}
+        else if (troco >= 2) {troco -= 1;moeda++;printf("Moedas de 2\n");}
+        else if (troco >= 1) {troco -= 1;moeda++;printf("Moedas de 1\n");}
+        else if (troco >= 0.5) {troco -= 0.5;moeda++;printf("Moedas de 0.5\n");}
+        else if (troco >= 0.2) {troco -= 0.2;moeda++;printf("Moedas de 0.2\n");}
+        else if (troco >= 0.1) {troco -= 0.1;moeda++;printf("Moedas de 0.1\n");}
+        else if (troco >= 0.05) {troco -= 0.05;moeda++;printf("Moedas de 0.05\n");}
+        else if (troco >= 0.01) {troco -= 0.01;moeda++;printf("Moedas de 0.01\n");}
     }
+    printf("Numero de notas utilizadas:%d\nNumero de moedas utilizadas:%d",nota,moeda);
 }*/
+
+
+
+
 //Ex 2.1
 /*int main() {
     int num1,num2,num3,m,s;
     printf("Introduza um numero:");
     scanf("%d",& num1);
-    //2.1
+    //1
     if(num1%2){printf("O numero é impar");}
     else{printf("O 1º numero é par");}
     printf("Introduza um numero:");
     scanf("%d",& num2);
     printf("Introduza um numero:");
     scanf("%d",& num3);
-    //2.2
+    //2
     if(num1>num2 && num1>num3){printf("%d",num1);}
     else if(num2>num1 && num2>num3){printf("%d",num2);}
     else if(num3>num1 && num3>num2){printf("%d",num3);}
-    //2.3
+    //3
     if(num1%2){if(num2%2){m=num1*num2;printf("%d",m);}else{printf("%d",num1);}}
     else{if(num2%2){printf("%d",num2);}else{s=num1+num2;printf("%d",s);}}
 }*/
@@ -122,6 +82,9 @@
     else if (nota<=13){printf("Suficiente");}
     else if (nota<=16){printf("Bom");}
     else{printf("Excelente");}
+
+
+
     //4
     int dia,mes;
     printf("Insira o dia e mes no formato dd/mm:\n");
@@ -175,6 +138,4 @@
     scanf("%d",& lados);
     char item[20][20]={"Não Existe","Não Existe","Triângulo","Quadrilátero","Pentágono","Hexágono","Octógono","Eneágono","Undecágono","dodecágono","tridecágono","tetradecágono","pentadecágono","hexadecágono","heptadecágono","octodecágono","eneadecágono","icoságono"};
     for(int i=0;i<21;i++){if((i+1)==lados){printf("O poligono é um %s",item[i]);}}
-
-
 }*/
