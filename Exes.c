@@ -1,6 +1,6 @@
 //
 // Created by Vasques on 17/02/2021.
-// Copiem uma alinea de cada vez, pode haver conflito entre variaveis com a mesma designação
+// Copiem uma alinea de cada vez, pode haver conflito entre variaveis com a mesma designação.
 #include <stdio.h>
 //Ex 1.2
 /*int main() {
@@ -30,7 +30,7 @@
 //Ex 2.1
 /*int main() {
     int num1,num2,num3,m,s;
-    printf("Introduza um numero:");
+    printf("Introduza um numero: ");
     scanf("%d",& num1);
     //1
     if(num1%2){printf("O numero é impar");}
@@ -53,7 +53,7 @@
 /*int main() {
     //1
     int idade;
-    printf("Insira a sua idade:");
+    printf("Insira a sua idade: ");
     scanf("%d",& idade);
     if (idade>=61){printf("Isento de pagamento");}
     else if(idade>=49){printf("Bilhete Light");}
@@ -75,7 +75,7 @@
 
     //3
     int nota;
-    printf("Escreva a nota do aluno:");
+    printf("Escreva a nota do aluno: ");
     scanf("%d",& nota);
     if (nota<=9){printf("Insuficiente");}
     else if (nota<=13){printf("Suficiente");}
@@ -123,7 +123,7 @@
 
     //6
     int num;
-    printf("Escreva o numero do mês:");
+    printf("Escreva o numero do mês: ");
     scanf("%d",&num);
     char mes[1][12]={"Janeiro","Fevereiro","Março","Abril","Maio","Junho","Julho","Agosto","Setembro","Outubro","Novembro","Dezembro"};
     if(num>=13||num<=0){printf("O numero que introduziu não corresponde a nenhum mês");}
