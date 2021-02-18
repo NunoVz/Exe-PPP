@@ -231,6 +231,15 @@
     float celsius;
     while(f<200){celsius=(f-32)/1.8;printf("%f\n",celsius);f+=5;}
 
+    //2
+    int linhas, i, j,espaçamento, num = 1;
+    printf("Introduza o numero de linhas: ");
+    scanf("%d", &linhas);
+    for (i = 1; i <= linhas; i++) {
+        for(espaçamento=1;espaçamento<=linhas-i;espaçamento++){printf("  ");}
+        for (j = 1; j <= i; ++j) {printf("%2d  ", num);++num;}
+        printf("\n");}
+
 
 
 }*/
