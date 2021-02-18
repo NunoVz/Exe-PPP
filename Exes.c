@@ -109,9 +109,9 @@
     //srand para os numeros random não serem sempre os mesmos
     srand(time(0));
     int dif;
-    //rand%7  para gerar um numero aleatorio de 0-6
-    int num1= rand()%7;
-    int num2=rand()%7;
+    //rand%7  para gerar um numero aleatorio de 1-6
+    int num1= rand()%6+1;
+    int num2=rand()%6+1;
     dif=num1-num2;
     printf("Num1:%d\nNum2:%d\n",num1,num2);
     printf("Diferença:%d\n",dif);
@@ -173,7 +173,6 @@
 }*/
 
 
-
 //Ex3.1
  /*int main() {
     //1
@@ -201,4 +200,37 @@
     scanf("%d",&num);
     if(num>maior){maior=num;}}
     printf("%d",maior);
+
+
+    //4
+    int num,x;
+    printf("Insira o numero:");
+    scanf("%d", &num);
+    for(int i=0;i<101;i++){
+        if(i%num==0){printf("%d, ",i);x++;if(x==4){break;}}
+    }
+
+
+    //5
+    #include <string.h>
+    char resposta;
+    char c="*";
+    for(int j=0;j<5;j++){
+        for(int i=0;i<j;i++){
+            printf("*");
+        }
+    printf("\n");
+    }
+}*/
+
+
+//Ex3.2
+/*int main() {
+    //1
+    int f=-50;
+    float celsius;
+    while(f<200){celsius=(f-32)/1.8;printf("%f\n",celsius);f+=5;}
+
+
+
 }*/
