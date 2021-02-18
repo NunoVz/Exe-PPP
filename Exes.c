@@ -170,4 +170,35 @@
     scanf("%d/%d/%d",&dia,&mes,&ano);
     for(int i=0;i<12;i++){if((i+1)==mes&&dia==meses[i][1]){mes++;dia=1;if(mes==12){ano++;}}else{dia++;break;}}
     printf("%d de %s de %d",dia,meses[mes-1][0],ano);
-}
+}*/
+
+
+
+//Ex3.1
+ /*int main() {
+    //1
+    int x,cont;
+    printf("Insira o numero[Este numero não estara incluido na soma]:");
+    scanf("%d",&x);
+    for(int i=0;i<x;i++){cont+=i;}
+    printf("%d",cont);
+
+
+    //2
+    int x,cont,i;
+    printf("Insira o numero para o contador parar quando a soma o ultrapassar:");
+    scanf("%d",&x);
+    while(cont<=x){i++;cont+=i;}
+    printf("%d",cont);
+
+
+    //3
+    int num,x;int maior=0;
+    printf("Quantos elementos quer adcionar:");
+    scanf("%d",&x);
+    for(int i=0;i<x;i++){
+    printf("Número:");
+    scanf("%d",&num);
+    if(num>maior){maior=num;}}
+    printf("%d",maior);
+}*/
