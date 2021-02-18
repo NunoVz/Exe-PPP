@@ -231,7 +231,7 @@
     float celsius;
     while(f<200){celsius=(f-32)/1.8;printf("%f\n",celsius);f+=5;}
 
-    //2
+    //2 Para numeros com maximo 2 digitos
     int linhas, i, j,espaçamento, num = 1;
     printf("Introduza o numero de linhas: ");
     scanf("%d", &linhas);
@@ -240,6 +240,22 @@
         for (j = 1; j <= i; ++j) {printf("%2d  ", num);++num;}
         printf("\n");}
 
+
+    //3
+    char ope;
+    int num;
+    printf("Escolha uma das operações(+,-,*,/):");
+    scanf("%c",& ope);
+    printf("Numero:");
+    scanf("%d",& num);
+    for (int i = 0; i <= 10; ++i) {
+        float res=0;
+        if(ope=='+'){res=num+i;}
+        else if(ope=='-'){res=num-i;}
+        else if(ope=='*'){res=num*i;}
+        else if(ope=='/'){res=num/i;}
+        printf("%2d + %2d = %.2f\n",num,i,res);
+    }
 
 
 }*/
