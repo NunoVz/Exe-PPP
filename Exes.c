@@ -32,11 +32,8 @@
     scanf("%f",&fahrenheit);
     graus = (fahrenheit-32) * 5/9;
     printf("O valor introduzido em graus é: %.2f",graus);
-<<<<<<< HEAD
 
-=======
-   
->>>>>>> 42f8aab03c17ec23ab31ed4963619e85ff4c78e2
+
 }*/
 
 
