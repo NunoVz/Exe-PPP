@@ -292,5 +292,21 @@
 
 
     //6
+    #include <string.h>
+    char num[20];
+    int cont;
+    printf("Insira os numeros, maximo 20 digitos: ");
+    scanf("%s",& num);
+    for (int i = 0; i < strlen(num); i++) {
+        cont+=num[i]-48;}
+    printf("%d",cont);
 
+    //7
+    int ano1, ano;
+    printf("Insira os anos no formato (ano/ano1): ");
+    scanf("%d/%d", &ano, &ano1);
+    for (int i = ano; i < (ano1+1); i++) {
+        if(!(i%4)){printf("%d |",i);}}
+
+    //8
 }*/
