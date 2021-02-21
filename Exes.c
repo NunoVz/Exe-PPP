@@ -4,6 +4,7 @@
 #include <stdio.h>
 //Ex 1.2
 /*int main() {
+    //1
     float preco;
     printf("Insira o preço do que deseja comprar: ");
     scanf("%f",& preco);
@@ -24,6 +25,14 @@
         else if (troco >= 0.01) {troco -= 0.01;moeda++;printf("Moedas de 0.01\n");}
     }
     printf("Numero de notas utilizadas:%d\nNumero de moedas utilizadas:%d",nota,moeda);
+
+    //2
+    float fahrenheit, graus;
+    printf("Introduza um valor em graus fahrenheit:");
+    scanf("%f",&fahrenheit);
+    graus = (fahrenheit-32) * 5/9;
+    printf("O valor introduzido em graus é: %.2f",graus);
+   
 }*/
 
 
