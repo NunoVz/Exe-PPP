@@ -32,7 +32,11 @@
     scanf("%f",&fahrenheit);
     graus = (fahrenheit-32) * 5/9;
     printf("O valor introduzido em graus é: %.2f",graus);
+<<<<<<< HEAD
+
+=======
    
+>>>>>>> 42f8aab03c17ec23ab31ed4963619e85ff4c78e2
 }*/
 
 
@@ -194,7 +198,7 @@
 
     //2
     int x,cont,i;
-    printf("Insira o numero para o contador parar quando a soma o ultrapassar:");
+    printf("Indique um numero limite: ");
     scanf("%d",&x);
     while(cont<=x){i++;cont+=i;}
     printf("%d",cont);
@@ -263,6 +267,35 @@
         else if(ope=='/'){res=num/i;}
         printf("%2d + %2d = %.2f\n",num,i,res);
     }
+    //4
+        int mult,mult1,x,y;
+    printf("Introduza o 1 numero: ");
+    scanf("%d",&x);
+    printf("Introduza o 2 numero: ");
+    scanf("%d",&y);
+    for (int i = 1; i < 11; ++i) {
+        mult=x*i;
+        for (int j = 1; j <11 ; ++j) { mult1=y*j;if(mult==mult1){break;}}
+        if(mult==mult1){break;}}
+    printf("O minimo multiplo comum de %d e %d é: %d",x,y,mult);
 
+
+    //5
+    int x,y;
+    printf("Introduza os numeros no formato (x/y): ");
+    scanf("%d/%d",&x,&y);
+    int resto=x%y;
+    int divisao=x/y;
+    while (resto!=0){
+        x=y;
+        y=resto;
+        divisao=x/y;
+        resto=x%y;
+        printf("%d/%d = %d resto %d\n",x,y,divisao,resto);
+    }
+    printf("O maior divisor comum dos numeros é: %d",y);
+
+
+    //6
 
 }*/
