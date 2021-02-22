@@ -133,7 +133,7 @@
     int num;
     printf("Escreva o numero do mês:");
     scanf("%d",&num);
-    char mes[1][12]={"Janeiro","Fevereiro","Março","Abril","Maio","Junho","Julho","Agosto","Setembro","Outubro","Novembro","Dezembro"};
+    char mes[13][12]={"Janeiro","Fevereiro","Março","Abril","Maio","Junho","Julho","Agosto","Setembro","Outubro","Novembro","Dezembro"};
     if(num>=13||num<=0){printf("O numero que introduziu não corresponde a nenhum mês");}
     else{for(int i=1;i<13;i++){if((i)==num){printf("%s",mes[i]);}}}
 
@@ -143,7 +143,7 @@
     int lados;
     printf("Insira o numero de lados(max=20): ");
     scanf("%d",& lados);
-    char item[1][20]={"Não Existe","Não Existe","Triângulo","Quadrilátero","Pentágono","Hexágono","Octógono","Eneágono","Undecágono","dodecágono","tridecágono","tetradecágono","pentadecágono","hexadecágono","heptadecágono","octodecágono","eneadecágono","icoságono"};
+    char item[20][20]={"Não Existe","Não Existe","Triângulo","Quadrilátero","Pentágono","Hexágono","Octógono","Eneágono","Undecágono","dodecágono","tridecágono","tetradecágono","pentadecágono","hexadecágono","heptadecágono","octodecágono","eneadecágono","icoságono"};
     for(int i=1;i<21;i++){if((i)==lados){printf("O poligono é um %s",item[i]);}}
 }*/
 
