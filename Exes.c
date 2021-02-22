@@ -341,4 +341,19 @@
     }
 
 
+    //9
+    #include<time.h>
+    int num,x,y;
+    srand(time(0));
+    printf("Insira o intervalo no formato (x/y):");
+    scanf("%d/%d",&x,&y);
+    int random= rand()%y+x;
+    for (int i = 3; i >= 0; --i) {
+        printf("Possui %d tentativas.\nInsira outro numero:",i);
+        scanf("%d",&num);
+        if(num>random){printf("O numero aleatorio é menor " );}
+        if(num<random){printf("O numero aleatorio é maior " );}
+        else{printf("Ganhou!!");break;}
+    }
+
 }*/
