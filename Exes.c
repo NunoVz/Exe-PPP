@@ -150,25 +150,20 @@
 
 //Ex2.3
 /*int main() {
-    //1, não sei se isto era o pretendido
-#include <string.h>
-    int cartoes;
-    printf("Insira o numero de cartões que quer criar:");
-    scanf("%d",&cartoes);
+    //1
     char um[]="1";
     char dois[]="0";
     char num[20];
     printf("Insira os 4 numeros originais:");
     scanf("%s",& num);
-    for(int j=1;j<(cartoes+1);j++) {
-        int cont=0;
-        for (int i = 0; i < strlen(num); i++) {
-            cont+=num[i]-'0';}
-        if(cont%2){strncat(num,&um,1);}
-        else{strncat(num,&dois,1);}
-        printf("%dº cartão:%s \n",j,num);
-    }
-
+    if(strlen(num)==4){
+    int cont=0;
+    for (int i = 0; i < strlen(num); i++) {
+        cont+=num[i]-'0';}
+    if(cont%2){strncat(num,&um,1);}
+    else{strncat(num,&dois,1);}
+    printf("Cartão: %s \n",num);}
+    else{printf("Erro nos numeros do cartão");}
 
     //2
     //Fev 2005/2006->28
