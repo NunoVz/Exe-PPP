@@ -297,11 +297,48 @@
     printf("%d",cont);
 
     //7
-    int ano1, ano;
-    printf("Insira os anos no formato (ano/ano1): ");
-    scanf("%d/%d", &ano, &ano1);
-    for (int i = ano; i < (ano1+1); i++) {
-        if(!(i%4)){printf("%d |",i);}}
+    int numinf, numsup, num;
+    int x = 1;
+    int dig = 10;
+    printf("Introduza o intervalo no formato (min/max):");
+    scanf("%d/%d", &numinf, &numsup);
+    while (dig >= 9) {
+        x *= 10;
+        dig = numsup / x;
+    }
+    for (int i = numinf; i <= numsup; ++i) {
+        int cont = 0;
+        for (int j = 1; j <= x; j *= 10) {
+            num = (i / j) % 10;
+            if (num == 6) { cont++; }
+        }
+        if (cont == 2) { printf("%d é um numero bissexto\n", i); }
+    }
 
     //8
+        int count, dias;
+    char primeirodia[20];
+    char *semana[7] = {"domingo","segunda-feira","terça-feira","quarta-feira","quinta-feira","sexta-feira","sabado"};
+    printf("nº de dias: ");
+    scanf("%d", &dias);
+    printf("1º dia: ");
+    scanf("%s", primeirodia);
+    for (int i = 0; i < 7; ++i) {
+        //printf("%s|%s\n", primeirodia,semana[i][0]);
+        if (strcmp(primeirodia, semana[i]) == 0) { count = -i; }
+    }
+    printf("------------------------------------\n");
+    printf("|  D |  S |  T |  Q |  Q |  S |  S |\n");
+    printf("------------------------------------\n");
+    for (int i = 0; i < 5; ++i) {
+        for (int j = 0; j < 7; ++j) {
+            count++;
+            if ((count <= 0) || (count > dias)) { printf("|    "); }
+            else { printf("| %2d ", count); }
+        }
+        printf("|\n------------------------------------\n");
+
+    }
+
+
 }*/
