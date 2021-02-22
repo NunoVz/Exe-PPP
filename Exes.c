@@ -47,11 +47,11 @@
     scanf("%d",& num2);
     printf("Introduza um numero:");
     scanf("%d",& num3);
-    //2
+    //2 adicionar ao 1
     if(num1>num2 && num1>num3){printf("%d",num1);}
     else if(num2>num1 && num2>num3){printf("%d",num2);}
     else if(num3>num1 && num3>num2){printf("%d",num3);}
-    //3
+    //3 adicionar ao 1
     if(num1%2){if(num2%2){m=num1*num2;printf("%d",m);}else{printf("%d",num1);}}
     else{if(num2%2){printf("%d",num2);}else{s=num1+num2;printf("%d",s);}}
 }*/
