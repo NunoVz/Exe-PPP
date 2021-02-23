@@ -258,14 +258,14 @@
         printf("%2d + %2d = %.2f\n",num,i,res);
     }
     //4
-        int mult,mult1,x,y;
+    int mult,mult1,x,y;
     printf("Introduza o 1 numero: ");
     scanf("%d",&x);
     printf("Introduza o 2 numero: ");
     scanf("%d",&y);
-    for (int i = 1; i < 11; ++i) {
+    for (int i = 1; i <= (x*y); ++i) {
         mult=x*i;
-        for (int j = 1; j <11 ; ++j) { mult1=y*j;if(mult==mult1){break;}}
+        for (int j = 1; j <=(x*y) ; ++j) { mult1=y*j;if(mult==mult1){break;}}
         if(mult==mult1){break;}}
     printf("O minimo multiplo comum de %d e %d é: %d",x,y,mult);
 
@@ -316,6 +316,7 @@
     }
 
     //8
+#include <string.h>
         int count, dias;
     char primeirodia[20];
     char *semana[7] = {"domingo","segunda-feira","terça-feira","quarta-feira","quinta-feira","sexta-feira","sabado"};
