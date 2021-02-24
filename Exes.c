@@ -358,8 +358,9 @@
     }
 
 
+
     //10
-    #include <string.h>
+#include <string.h>
 #include <math.h>
     char num[50];
     while(strcmp(num, "quit")!=0) {
@@ -382,14 +383,7 @@
                         break;
                     case(1):
                         //Dec->Octal
-                        k=1;
-                        while (numint != 0)
-                        {
-                            resultado += (numint % 8) * k;
-                            numint /= 8;
-                            k *= 10;
-                        }
-                        printf("%s = %d",num,resultado);
+                        printf("%s = %o\n",num,numint);
                         break;
                     case(2):
                         //Dec->Bin
@@ -491,6 +485,23 @@
         }
     }
 
- 
+
     //11
+    int cont,valor;
+    float mediaari;double mediahar;
+    while(valor!=999) {
+        printf("Introduza um valor:");
+        scanf("%d",&valor);
+        if(valor!=999){
+            cont++;
+            mediaari+=valor;
+            mediahar+=1/valor;
+        }
+        else{
+            mediaari=mediaari/cont;
+            mediahar=cont/mediahar;
+            printf("A média aritmética: %f\nA média harmónica: %lf",mediaari,mediahar);
+        }
+    }
+
 }*/
