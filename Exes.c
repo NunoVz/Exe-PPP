@@ -357,4 +357,140 @@
         else{printf("Ganhou!!");break;}
     }
 
+
+    //10
+    #include <string.h>
+#include <math.h>
+    char num[50];
+    while(strcmp(num, "quit")!=0) {
+        int baseintr,baseconv,numint,potencia,resultado = 0, base = 1, resto,a[50],k;
+        printf("Introduza um numero (quit para sair): ");
+        scanf("%s", num);
+        printf("Qual a base do número introduzido (0 -Decimal; 1 -Octal; 2 -Binária): ");
+        scanf("%d",&baseintr);
+        printf("Qual a base para a conversão (0 -Decimal; 1 -Octal; 2 -Binária): ");
+        scanf("%d",&baseconv);
+        potencia=1;
+        //Estes Fors transformam a string numa variavel int
+        for (int i =(strlen(num)-1); i >= 0; --i) {for (int j = 1; j <= strlen(num)-i-j; ++j) {potencia*=10;} numint+=(num[i]-48)*potencia;}
+        switch(baseintr){
+            resultado=0;
+            case(0):
+                switch(baseconv){
+                    case(0):
+                        printf("%s",num);
+                        break;
+                    case(1):
+                        //Dec->Octal
+                        k=1;
+                        while (numint != 0)
+                        {
+                            resultado += (numint % 8) * k;
+                            numint /= 8;
+                            k *= 10;
+                        }
+                        printf("%s = %d",num,resultado);
+                        break;
+                    case(2):
+                        //Dec->Bin
+                        for( k=0;numint>0;k++) {
+                            a[k]=numint%2;
+                            numint=numint/2;
+                        }
+                        printf("%s  = ",num);
+                        for(k=k-1;k>=0;k--){
+                            printf("%d",a[k]);
+                        }
+                        printf("\n");
+                        break;
+                }
+                break;
+            case(1):
+                switch(baseconv){
+                    case(0):
+                        //Octal->Dec
+                        k = 0;
+
+                        while(numint != 0)
+                        {
+                            resultado += (numint%10) * pow(8,k);
+                            ++k;
+                            numint/=10;
+                        }
+
+                        k = 1;
+                        printf("%s = %d",num,resultado);
+                        break;
+                    case(1):
+                        printf("%s\n",num);
+                        break;
+                    case(2):
+                        //Octal->Bin
+
+                        //Octal->Dec
+                        k = 0;
+
+                        while(numint != 0)
+                        {
+                            resultado += (numint%10) * pow(8,k);
+                            ++k;
+                            numint/=10;
+                        }
+
+                        k = 1;
+                        //Dec->Bin
+                        for( k=0;numint>0;k++) {
+                            a[k]=numint%2;
+                            numint=numint/2;
+                        }
+                        printf("%s  = ",num);
+                        for(k=k-1;k>=0;k--){
+                            printf("%d",a[k]);
+                        }
+                        printf("\n");
+                        break;
+                }
+                break;
+            case(2):
+                switch(baseconv){
+                    case(0):
+                        //Bin->Dec
+                        while (numint > 0)
+                        {
+                            resto = numint % 10;
+                            resultado = resultado + resto * base;
+                            numint = numint / 10 ;
+                            base = base * 2;
+                        }
+                        printf("%s = %d\n",num,resultado);
+                        break;
+                    case(1):
+                        //Bin->Octal
+                        resultado = 0,k = 0;
+                        int dec = 0;
+                        // Bin->Dec
+                        while (numint != 0) {
+                            dec += (numint % 10) * pow(2, k);
+                            ++k;
+                            numint /= 10;
+                        }
+                        k = 1;
+                        // Dec->Octal
+                        while (dec != 0) {
+                            resultado += (dec % 8) * k;
+                            dec /= 8;
+                            k *= 10;
+                        }
+                        printf("%s = %d",num,resultado);
+                        break;
+                    case(2):
+                        printf("%s\n",num);
+                        break;
+                }
+                break;
+        }
+    }
+
+ 
+    //11
 }*/
