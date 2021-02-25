@@ -584,8 +584,65 @@ int main() {
         }num++;
     }
 
+    //5
+    int x;
+    printf("Introduza um limite maximo: ");
+    scanf("%d",&x);
+    printf("Numeros primos: ");
+    for (int j = 1; j < x; ++j) {
+        int primo=1;
+        for (int k = 2; k <j;++k) {
+            if(!(j%k)){primo=0;}
+        }
+        if(primo){printf("%d ",j);}
+    }
 
+    //6
+    int fib,fib1,fib2=1,i;
+    while(fib2<=100){
+        fib=fib1+fib2;
+        fib1=fib2;
+        fib2=fib;
+        if(fib<=100){
+        printf("F%d: %d\n",i,fib);}
+        i++;
+    }
 
+    //7
+    #include <math.h>
+    int x,elevado,menossign;
+    printf("Insira um limite maximo:");
+    scanf("%d", &x);
+    for (int i = 0; i < pow(10,x)-1;++i) {
+        elevado=pow(i,2);
+        menossign=elevado%(int)pow(10,x);
+        if(menossign==i){printf("Possui:%d(%d*%d=%d)\n",i,i,i,elevado);}
+    }
+
+    //8
+    int n, numcontrario = 0, resto, num;
+    printf("Enter an integer: ");
+    scanf("%d", &n);
+    num = n;
+    while( n!=0 ){
+        resto = n%10;
+        numcontrario = numcontrario*10 + resto;
+        n /= 10;
+    }
+    if (num == numcontrario){printf("%d é capicua", num);}
+    else{printf("%d não é capicua", num);}
+
+    //9
+    for (int i = 100; i <= 1000; i+=100) {
+        int cont=0;
+        float num=i;
+        while (num>=2) {
+            num = num / 2;
+            cont++;
+        }
+    printf("log(%d)=%d \n",i,cont);
+    }
+}
 }*/
 
 
