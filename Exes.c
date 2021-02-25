@@ -151,6 +151,7 @@
 //Ex2.3
 /*int main() {
     //1
+#include <string.h>
     char um[]="1";
     char dois[]="0";
     char num[20];
@@ -195,14 +196,15 @@
 
 
     //3
-    int num,x;int maior=0;
+    int num,x,menor;
     printf("Quantos elementos quer adcionar:");
     scanf("%d",&x);
     for(int i=0;i<x;i++){
-    printf("Número:");
-    scanf("%d",&num);
-    if(num>maior){maior=num;}}
-    printf("%d",maior);
+        printf("Número:");
+        scanf("%d",&num);
+        if (i==0){menor=num;}
+        else if(num<menor){menor=num;}}
+    printf("%d",menor);
 
 
     //4
@@ -222,6 +224,16 @@
         }
     printf("\n");
     }
+
+
+    //5 versão alternatica proposta na aula
+    int linhas, i, j,espaçamento;
+    printf("Introduza o numero de linhas: ");
+    scanf("%d", &linhas);
+    for (i = 1; i <= linhas; i++) {
+        for(espaçamento=1;espaçamento<=linhas-i;espaçamento++){printf(" ");}
+        for (j = 1; j <= i; ++j) {printf("* ");}
+        printf("\n");}
 }*/
 
 
@@ -239,7 +251,7 @@
     for (i = 1; i <= linhas; i++) {
         for(espaçamento=1;espaçamento<=linhas-i;espaçamento++){printf("  ");}
         for (j = 1; j <= i; ++j) {printf("%2d  ", num);++num;}
-        printf("\n");}
+    printf("\n");}
 
 
     //3
@@ -490,8 +502,11 @@
     int cont,valor;
     float mediaari;double mediahar;
     while(valor!=999) {
+    int cont;double valor=0L;
+    double mediaari;double mediahar;
+    while(valor!=999) {
         printf("Introduza um valor:");
-        scanf("%d",&valor);
+        scanf("%lf",&valor);
         if(valor!=999){
             cont++;
             mediaari+=valor;
@@ -500,8 +515,77 @@
         else{
             mediaari=mediaari/cont;
             mediahar=cont/mediahar;
-            printf("A média aritmética: %f\nA média harmónica: %lf",mediaari,mediahar);
+            printf("A média aritmética: %.3f\nA média harmónica: %.3f",mediaari,mediahar);
         }
     }
 
 }*/
+
+//Ex 3.3
+/*
+int main() {
+    //1
+    int c=-5,f;
+    printf("C ");
+    while(c!=200){printf("%3d ",c );c+=5;}
+    printf("\nF ");
+    c=-5;
+    while(c!=200){f=c*(9/5)+32;printf("%3d ",f);c+=5;}
+
+
+    //2
+        int primeiro,segundo,soma1,soma2;
+    printf("Introduza o primeiro numero:");
+    scanf("%d",&primeiro);
+    printf("Introduza o segundo numero:");
+    scanf("%d",&segundo);
+    for (int a = 1;a<primeiro;a++){
+        if (primeiro%a == 0){
+            soma1+=a;
+        }
+    }
+    for (int a = 1;a<segundo;a++) {
+        if (segundo%a == 0) {
+            soma2 += a;
+        }
+    }
+    if (soma2 == primeiro && soma1 == segundo){
+        printf("%d e %d sao numeros amigos!",primeiro,segundo);
+    }
+    else {
+        printf("%d e %d nao sao numeros amigos :(",primeiro,segundo);
+    }
+
+    //3
+        int x,soma=0;
+    printf("Introduza um numero: ");
+    scanf("%d",&x);
+    for (int i = 1; i < x; ++i) {
+        if(!(x%i)){ soma+=i;}}
+    if(soma==x){
+        printf("Numero perfeito : %d\n",x);
+        printf("Fatores: ");
+        for (int i = 1; i < x; ++i) {
+            if(!(x%i)){ printf("%d ",i);}}
+    }
+    else{printf("Não é um numero perfeito");}
+
+    //4
+    #include <math.h>
+    int num,cont,primeiro,segundo,terceiro;
+    num=100;
+    while(cont!=4){
+        primeiro=(num/1)%10;
+        segundo=(num/10)%10;
+        terceiro=(num/100)%10;
+        if(num==(pow(primeiro,3)+pow(segundo,3)+pow(terceiro,3))){
+            printf("%d=%d^3+%d^3+%d^3\n",num,primeiro,segundo,terceiro);
+            cont++;
+        }num++;
+    }
+
+
+
+}*/
+
+
