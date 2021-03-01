@@ -523,6 +523,7 @@
 
 //Ex 3.3
 /*
+// 1
 int main() {
     //1
     int c=-5,f;
@@ -646,3 +647,55 @@ int main() {
 }*/
 
 
+//Ex 4.1
+/*
+int validate(int n);
+int fatorial(int n);
+int main(){
+    int num;
+    printf("Insira um numero: ");
+    scanf("%d",&num);
+    if(validate(num)){
+        printf("%d",fatorial(num));
+    }
+
+}
+int fatorial(int n){
+    int fat=1;
+    for (int i = 1; i <= n; ++i) {
+        fat*=i;
+    }
+    return fat;
+}
+
+int validate(int n){
+    return (n>0);
+}*/
+
+//Ex 4.1
+/*
+ //1
+void formula(int n);
+
+int main(){
+    int x;
+    printf("Insira o valor de n\nn = ");
+    scanf("%d",&x);
+    formula(x);
+}
+void formula(int n){
+    int result=1;
+    for (int i = n-1; i > 1; --i) {
+        result= result*i;
+        printf("p(%d/%d)=%d\n", n,((n+1)-i),result);
+    }
+}
+
+
+
+
+
+
+
+
+ */
