@@ -693,6 +693,8 @@ void formula(int n){
     }
 }
  //6
+int capicua(int n);
+void compara(int num,int numcontrario);
  int main() {
     //declaro 4 variaveis
     int n;
@@ -718,5 +720,161 @@ void compara(int x,int y){
 
 
 
+//8
+ int formula(int CI,int CII){
+    int resultado;
+    resultado=(int)pow(CI,2)+(int)pow(CII,2);
+    return resultado;
+}
+int verificacao(int x,int y,int z){
+    if (x>y && x>z){
+        if(pow(x,2)==formula(y,z)){
+            return 1;
+        }
+        return 0;
+    }
+    if (y>z && y>x){
+        if(pow(y,2)==formula(x,z)){
+            return 1;
+        }
+        return 0;
+
+    }
+    if (z>x && z>y){
+        if(pow(z,2)==formula(y,x)){
+            return 1;
+        }
+        return 0;
+    }
+}
+
+int main() {
+    //h2=c2+c2
+    //pow()->Math.h
+    //py(3**2==9), C(pow(5,2)=25)
+    int x,y,z;
+    printf("Introduza os numeros no formato(x/y/z):");
+    scanf("%d/%d/%d",&x,&y,&z);
+    if(verificacao(x,y,z))
+        printf("É possivel");
+    else
+        printf("Não é possivel");
+}
+
+
+
 
  */
+
+
+//Ex 4.2.3
+
+//1
+/*
+int contador_dig(int y){
+    int num=y,cont=0;
+    while(num!=0){
+        cont++;
+        num/=10;
+    }
+    return cont;}
+
+
+int verificar(int x,int y,int dig){
+    int n;
+    while(x!=0){
+        n=x%(int)pow(10,dig);
+        if(n==y){return 1;}
+        x/=10;
+    }
+    return 0;
+}
+int main() {
+    int x,y;
+    printf("Insira os dois numeros no formato(x/y):");
+    scanf("%d/%d",&x,&y);
+    if(verificar(x,y,contador_dig(y)))
+        printf("O numero esta contido!\n");
+    else
+        printf("O numero não esta contido!\n");
+}*/
+//4
+
+/*int inverte(int n) {
+    int resto, numcontrario = 0;
+    while (n != 0) {
+        resto = n % 10;
+        numcontrario = numcontrario * 10 + resto;
+        n /= 10;
+    }
+    return numcontrario;
+}
+void espera(){
+    Sleep(50);
+}
+int main() {
+    int x,algarismo,num;
+    while(1) {
+        printf("Insira um numero:");
+        scanf("%d", &x);
+        x = inverte(x);
+        for (int i = 9; i > 0; --i) {
+            num = x;
+            while (num != 0) {
+                algarismo = num % 10;
+                if (algarismo >= i)
+                    printf("*");
+                else
+                    printf(" ");
+                num /= 10;
+            }
+            printf("\n");
+        }
+        espera();
+    }
+}*/
+
+
+
+
+
+//5
+/*
+double formulamedia(char esta[5]){
+    double media=0;
+    for (int i = 0; i < 5; ++i) {
+        media+=esta[i];
+    }
+    media/=5;
+    return media;
+}
+double formulaequilibrio(char esta[5],double media){
+    double equilibrio=0;
+    for (int i = 0; i < 5; ++i) {
+        equilibrio+=pow((esta[i]-media),2);
+    }
+    equilibrio*=(double)1/(5-1);
+    return equilibrio;
+}
+double formulaclassificacao(double media,double equilibrio){
+    double classificao;
+    if(equilibrio<=media)
+        classificao=media;
+    else
+        classificao=media/2;
+    return classificao;
+}
+int main() {
+    int numero=0, x, y, z, k, l;
+    while (numero!=-1) {
+        scanf("%d",&numero);
+        if(numero==-1){printf("O programa vai encerrar");break;}
+        scanf("%d %d %d %d %d", &x, &y, &z, &k, &l);
+        char esta[5] = {x, y, z, k, l};
+        printf("%d\nMedia=%lf\nEquilibrio=%lf\n", numero, formulamedia(esta),
+               formulaequilibrio(esta, formulamedia(esta)));
+        printf("Classifição=%lf\n",
+               formulaclassificacao(formulamedia(esta), formulaequilibrio(esta, formulamedia(esta))));
+    }
+}
+*/
