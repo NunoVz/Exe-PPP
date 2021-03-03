@@ -672,7 +672,9 @@ int validate(int n){
     return (n>0);
 }*/
 
-//Ex 4.1
+
+
+//Ex 4.2
 /*
  //1
 void formula(int n);
@@ -690,9 +692,28 @@ void formula(int n){
         printf("p(%d/%d)=%d\n", n,((n+1)-i),result);
     }
 }
+ //6
+ int main() {
+    //declaro 4 variaveis
+    int n;
+    printf("Introduz um numero: ");
+    scanf("%d", &n);
+    compara(n,capicua(n));
+}
 
-
-
+int capicua(int n ){
+    int resto,numcontrario=0;
+    while( n!=0 ){
+        resto = n%10;
+        numcontrario = numcontrario*10 + resto;
+        n /= 10;
+    }
+    return numcontrario;
+}
+void compara(int x,int y){
+    if (x == y){printf("%d é capicua", x);}
+    else{printf("%d não é capicua", x);}
+}
 
 
 
