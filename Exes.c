@@ -692,6 +692,8 @@ void formula(int n){
         printf("p(%d/%d)=%d\n", n,((n+1)-i),result);
     }
 }
+ //3
+
  //6
 int capicua(int n);
 void compara(int num,int numcontrario);
@@ -800,6 +802,61 @@ int main() {
 }*/
 
 
+
+
+
+//2
+/*
+float numgen(){
+    float x;
+    x=((float)rand()/(float)(RAND_MAX));
+    return x;
+}
+int verificação(float x,float y){
+    float conta=pow(x,2)+pow(y,2);
+    if (conta>=1){return 0;}//Fora
+    else return 1;//dentro
+}
+int main (){
+#include<time.h>
+#include <stdlib.h>
+    srand(time(0));
+    int dentro,fora=0,x;
+    float quociente;
+    printf("Introduza um numero, quanto maior mais perto estara de ~=0.7853:");
+    scanf("%d",&x);
+    for (int i = 0; i < x; ++i) {
+        if (verificação(numgen(), numgen()))
+            dentro++;
+        else
+            fora++;
+    }
+    quociente=(float)dentro/fora;
+    printf("%f\n",quociente);
+}
+*/
+
+
+
+
+//3
+/*double mySqrt(int n, int numCasasDecimais){
+    float anteriorsqrt=0,sqrt;
+    sqrt=n/2;
+    while(sqrt!=anteriorsqrt){
+        anteriorsqrt=sqrt;
+        sqrt=(n/anteriorsqrt+anteriorsqrt)/2;
+    }
+    return (double)round(sqrt*pow(10,numCasasDecimais))/pow(10,numCasasDecimais);
+}
+int main (){
+    int n,numCasasDecimais;
+    printf("Insira o numero:");
+    scanf("%d",&n);
+    printf("Insira o numero de casas decimais:");
+    scanf("%d",&numCasasDecimais);
+    printf("%lf",mySqrt(n,numCasasDecimais));
+}*/
 
 //4
 
