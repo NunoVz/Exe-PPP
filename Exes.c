@@ -798,6 +798,9 @@ int main() {
     else
         printf("O numero não esta contido!\n");
 }*/
+
+
+
 //4
 
 /*int inverte(int n) {
